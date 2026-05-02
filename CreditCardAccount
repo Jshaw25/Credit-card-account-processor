@@ -1,1 +1,48 @@
-
+import java.util.Scanner;
+ public class creditCard {
+     Scanner input = new Scanner(System.in);
+     public static void main (String[]args) {
+         creditCard ccObj = new creditCard();
+         int accountnum = ccObj.getAccountNum();
+         double monthBal = ccObj.getMonthBal();
+         double monthchar = ccObj.getMonthchar();
+         double monthpay = ccObj.getMonthPay();
+         double credlim = ccObj.getCreditLim();
+         ccObj.displayResults();
+         
+         
+     }
+     public int getAccountNum() {
+         System.out.print("Enter your account number: ");
+         int an = input.nextInt();
+         return an;
+     }
+     public double getMonthBal() {
+         System.out.print("Enter your monthly balance: ");
+         double bal = input.nextDouble();
+         return bal;
+     }
+     public double getMonthChar() {
+         System.out.print("Enter your monthly charges: ");
+         double mc = input.nextDouble();
+        
+        while (mc == -1) {
+            System.out.println(monthchar);           
+          totalCharges = mc + mc;
+           return mc;
+        }
+     }
+     public double getMonthPay() {
+         System.out.print("Enter your total payments for the month: ");
+         double pay = input.nextDouble();
+         return pay;
+     }
+     public double getCreditLim() {
+         System.out.print("Enter your credit limit: ");
+         double lim = input.nextDouble();
+         return lim;
+     }
+     public void displayResults () {
+         
+     }
+ }
